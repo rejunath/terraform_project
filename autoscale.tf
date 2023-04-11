@@ -1,9 +1,9 @@
 #ASG
 
 resource "aws_autoscaling_group" "cardapp-asg" {
-  desired_capacity   = 2
-  max_size           = 5
-  min_size           = 2
+  desired_capacity   = "${var.desired-instance-count}"
+  max_size           = "${var.max-instance-count}"
+  min_size           = "${var.min-instance-count}"
   vpc_zone_identifier = ["${aws_subnet.cardapp-subnet-1a-public.id}","${aws_subnet.cardapp-subnet-1b-public.id}"]
 
   launch_template {
