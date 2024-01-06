@@ -1,10 +1,3 @@
-terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-     }
-  }
-}
 
 provider "github" {
   token = "Provide_token"
